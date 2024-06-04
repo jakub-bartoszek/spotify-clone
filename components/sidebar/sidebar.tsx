@@ -8,11 +8,7 @@ import { Box } from "../box";
 import { SidebarItem } from "./sidebar-item";
 import { Library } from "../library";
 
-interface SidebarProps {
- children: React.ReactNode;
-}
-
-export const Sidebar = ({ children }: SidebarProps) => {
+export const Sidebar = () => {
  const pathname = usePathname();
 
  const routes = useMemo(
@@ -50,7 +46,6 @@ export const Sidebar = ({ children }: SidebarProps) => {
      <Library />
     </Box>
    </div>
-   <main className="h-full flex-1 overflow-y-auto py-2">{children}</main>
   </div>
  );
 };
