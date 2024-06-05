@@ -17,9 +17,9 @@ export default function RootLayout({
  return (
   <html lang="en">
    <body className={font.className}>
-    <div className="h-full flex">
+    <div className="h-full flex p-2 gap-2">
      <Sidebar />
-     <main className="h-full flex-1 overflow-y-auto py-2">{children}</main>
+     <main className="h-full flex-1 overflow-y-auto">{children}</main>
     </div>
    </body>
   </html>
