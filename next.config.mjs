@@ -5,7 +5,10 @@ const nextConfig = {
    {
     protocol: 'https',
     hostname: 'misc.scdn.co',
-    port: '',
+   },
+   {
+    protocol: 'https',
+    hostname: 'oudcdlshblhvhfsrorfi.supabase.co',
    },
   ],
  },
