@@ -14,7 +14,7 @@ import toast from "react-hot-toast";
 
 interface HeaderProps {
  children: React.ReactNode;
- className?: "string";
+ className?: string;
 }
 
 export const Header = ({ children, className }: HeaderProps) => {
