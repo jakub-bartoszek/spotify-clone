@@ -2,12 +2,15 @@
 
 import { Song } from "@/types/types";
 import SongItem from "./song-item";
+import useOnPlay from "@/hooks/useOnPlay";
 
 interface PageContentProps {
  songs: Song[];
 }
 
 const PageContent = ({ songs }: PageContentProps) => {
+ const onPlay = useOnPlay(songs);
+
  if (songs.length === 0) {
   return <div className="mt-4 text-neutral-400">No songs avaible</div>;
  }
@@ -16,7 +19,7 @@ const PageContent = ({ songs }: PageContentProps) => {
    {songs.map((item) => (
     <SongItem
      key={item.id}
-     onClick={() => {}}
+     onClick={(id: string) => onPlay(id)}
      data={item}
     />
    ))}
