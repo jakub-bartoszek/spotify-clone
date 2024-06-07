@@ -31,7 +31,7 @@ const Sidebar = ({ songs }: SidebarProps) => {
     href: "/search"
    }
   ],
-  []
+  [pathname]
  );
 
  return (
