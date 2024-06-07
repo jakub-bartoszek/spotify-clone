@@ -6,7 +6,7 @@ import { useUser } from "@/hooks/useUser";
 import { Song } from "@/types/types";
 import { AiOutlinePlus } from "react-icons/ai";
 import { TbPlaylist } from "react-icons/tb";
-import LibraryItem from "./library-item";
+import MediaItem from "../media-item";
 
 interface LibraryProps {
  songs: Song[];
@@ -43,7 +43,7 @@ const Library = ({ songs }: LibraryProps) => {
    </div>
    <div className="flex flex-col gap-y-2 mt-4 px-3 h-full overflow-hidden overflow-y-auto">
     {songs.map((item) => (
-     <LibraryItem
+     <MediaItem
       onClick={() => {}}
       key={item.id}
       data={item}

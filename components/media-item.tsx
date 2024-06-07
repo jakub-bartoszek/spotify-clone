@@ -5,12 +5,12 @@ import { Song } from "@/types/types";
 import Image from "next/image";
 import { IoMusicalNotes } from "react-icons/io5";
 
-interface LibraryItemProps {
+interface MediaItemProps {
  data: Song;
  onClick: (id: string) => void;
 }
 
-const LibraryItem = ({ data, onClick }: LibraryItemProps) => {
+const MediaItem = ({ data, onClick }: MediaItemProps) => {
  const imagePath = useLoadImage(data);
 
  const handleClick = () => {
@@ -48,4 +48,4 @@ const LibraryItem = ({ data, onClick }: LibraryItemProps) => {
  );
 };
 
-export default LibraryItem;
+export default MediaItem;
