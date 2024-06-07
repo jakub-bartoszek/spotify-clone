@@ -6,9 +6,14 @@ import { BiSearch } from "react-icons/bi";
 import { HiHome } from "react-icons/hi";
 import { Box } from "../box";
 import { SidebarItem } from "./sidebar-item";
-import { Library } from "../library";
+import { Library } from "../library/library";
+import { Song } from "@/types/types";
 
-export const Sidebar = () => {
+interface SidebarProps {
+ songs: Song[];
+}
+
+export const Sidebar = ({ songs }: SidebarProps) => {
  const pathname = usePathname();
 
  const routes = useMemo(
@@ -42,7 +47,7 @@ export const Sidebar = () => {
     </div>
    </Box>
    <Box className="oferflow-y-auto h-full">
-    <Library />
+    <Library songs={songs} />
    </Box>
   </div>
  );
