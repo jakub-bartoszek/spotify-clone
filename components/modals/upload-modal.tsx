@@ -105,6 +105,7 @@ const UploadModal = () => {
    toast.error("Something went wrong!");
   } finally {
    setIsLoading(false);
+   uploadModal.onClose();
   }
  };
 
