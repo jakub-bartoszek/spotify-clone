@@ -22,9 +22,9 @@ const Slider = ({ value = 0.5, onChange }: SliderProps) => {
    step={0.01}
   >
    <RadixSlider.Track className="bg-neutral-600 relative grow rounded-full h-1">
-    <RadixSlider.Range className="absolute bg-white group-hover:bg-green-500 rounded-full h-full" />
+    <RadixSlider.Range className="absolute bg-white group-hover:bg-green-500 rounded-full h-full transition" />
    </RadixSlider.Track>
-   <RadixSlider.Thumb className="hidden group-hover:block bg-white h-3 w-3 rounded-full cursor-pointer" />
+   <RadixSlider.Thumb className="block h-3 w-3 scale-0 group-hover:scale-100 bg-white rounded-full cursor-pointer transition" />
   </RadixSlider.Root>
  );
 };
