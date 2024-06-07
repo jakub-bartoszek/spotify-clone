@@ -12,7 +12,7 @@ interface LibraryProps {
  songs: Song[];
 }
 
-export const Library = ({ songs }: LibraryProps) => {
+const Library = ({ songs }: LibraryProps) => {
  const authModal = useAuthModal();
  const uploadModal = useUploadModal();
  const { user } = useUser();
@@ -53,3 +53,5 @@ export const Library = ({ songs }: LibraryProps) => {
   </div>
  );
 };
+
+export default Library;

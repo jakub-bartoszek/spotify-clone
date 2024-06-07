@@ -5,7 +5,7 @@ import { BiSearch } from "react-icons/bi";
 import { HiHome } from "react-icons/hi";
 import { RxCaretLeft, RxCaretRight } from "react-icons/rx";
 import { twMerge } from "tailwind-merge";
-import { Button } from "./button";
+import Button from "./button";
 import useAuthModal from "@/hooks/useAuthModal";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { useUser } from "@/hooks/useUser";
@@ -17,7 +17,7 @@ interface HeaderProps {
  className?: string;
 }
 
-export const Header = ({ children, className }: HeaderProps) => {
+const Header = ({ children, className }: HeaderProps) => {
  const router = useRouter();
  const authModal = useAuthModal();
 
@@ -118,3 +118,5 @@ export const Header = ({ children, className }: HeaderProps) => {
   </div>
  );
 };
+
+export default Header;

@@ -3,14 +3,13 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { FaPlay } from "react-icons/fa";
-
 interface ListItemProps {
  image: string;
  name: string;
  href: string;
 }
 
-export const ListItem = ({ image, name, href }: ListItemProps) => {
+const ListItem = ({ image, name, href }: ListItemProps) => {
  const router = useRouter();
 
  const onClick = () => {
@@ -37,3 +36,5 @@ export const ListItem = ({ image, name, href }: ListItemProps) => {
   </button>
  );
 };
+
+export default ListItem;

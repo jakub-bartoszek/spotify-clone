@@ -5,7 +5,7 @@ interface BoxProps {
  className?: string;
 }
 
-export const Box = ({ children, className }: BoxProps) => {
+const Box = ({ children, className }: BoxProps) => {
  return (
   <div
    className={twMerge(`bg-neutral-900 rounded-lg h-fit w-full`, className)}
@@ -14,3 +14,5 @@ export const Box = ({ children, className }: BoxProps) => {
   </div>
  );
 };
+
+export default Box;

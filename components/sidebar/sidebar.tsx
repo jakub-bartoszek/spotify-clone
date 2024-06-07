@@ -4,16 +4,16 @@ import { usePathname } from "next/navigation";
 import { useMemo } from "react";
 import { BiSearch } from "react-icons/bi";
 import { HiHome } from "react-icons/hi";
-import { Box } from "../box";
-import { SidebarItem } from "./sidebar-item";
-import { Library } from "../library/library";
+import Box from "../box";
+import SidebarItem from "./sidebar-item";
+import Library from "../library/library";
 import { Song } from "@/types/types";
 
 interface SidebarProps {
  songs: Song[];
 }
 
-export const Sidebar = ({ songs }: SidebarProps) => {
+const Sidebar = ({ songs }: SidebarProps) => {
  const pathname = usePathname();
 
  const routes = useMemo(
@@ -52,3 +52,5 @@ export const Sidebar = ({ songs }: SidebarProps) => {
   </div>
  );
 };
+
+export default Sidebar;

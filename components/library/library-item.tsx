@@ -10,7 +10,7 @@ interface LibraryItemProps {
  onClick: (id: string) => void;
 }
 
-export const LibraryItem = ({ data, onClick }: LibraryItemProps) => {
+const LibraryItem = ({ data, onClick }: LibraryItemProps) => {
  const imagePath = useLoadImage(data);
 
  const handleClick = () => {

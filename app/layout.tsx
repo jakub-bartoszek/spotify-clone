@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
 import "./globals.css";
-import { Sidebar } from "@/components/sidebar/sidebar";
+import Sidebar from "@/components/sidebar/sidebar";
 import SupabaseProvider from "@/components/providers/supabase-provider";
 import UserProvider from "@/components/providers/user-provider";
 import ModalProvider from "@/components/providers/modal-provider";

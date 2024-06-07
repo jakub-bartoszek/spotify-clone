@@ -1,6 +1,6 @@
 "use client";
 
-import { Modal } from "@/components/modals/modal";
+import Modal from "@/components/modals/modal";
 import useAuthModal from "@/hooks/useAuthModal";
 import {
  useSessionContext,

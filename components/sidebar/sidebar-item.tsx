@@ -9,7 +9,7 @@ interface SidebarItemProps {
  href: string;
 }
 
-export const SidebarItem = ({
+const SidebarItem = ({
  icon: Icon,
  label,
  active,
@@ -28,3 +28,5 @@ export const SidebarItem = ({
   </Link>
  );
 };
+
+export default SidebarItem;

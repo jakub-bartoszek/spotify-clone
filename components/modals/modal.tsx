@@ -9,7 +9,7 @@ interface ModalProps {
  children: React.ReactNode;
 }
 
-export const Modal = ({
+const Modal = ({
  isOpen,
  onChange,
  title,
@@ -42,3 +42,5 @@ export const Modal = ({
   </Dialog.Root>
  );
 };
+
+export default Modal;
