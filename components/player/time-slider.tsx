@@ -2,12 +2,13 @@
 
 import * as RadixSlider from "@radix-ui/react-slider";
 
-interface SliderProps {
+interface TimeSliderProps {
  value?: number;
  onChange?: (value: number) => void;
+ max: number;
 }
 
-const Slider = ({ value = 0.5, onChange }: SliderProps) => {
+const TimeSlider = ({ value = 0, onChange, max }: TimeSliderProps) => {
  const handleChange = (newValue: number[]) => {
   onChange?.(newValue[0]);
  };
@@ -16,9 +17,9 @@ const Slider = ({ value = 0.5, onChange }: SliderProps) => {
   <RadixSlider.Root
    onValueChange={handleChange}
    className="group relative flex items-center select-none touch-none w-full h-3"
-   defaultValue={[0.5]}
+   defaultValue={[0]}
    value={[value]}
-   max={1}
+   max={max}
    step={0.01}
   >
    <RadixSlider.Track className="bg-neutral-600 relative grow rounded-full h-1">
@@ -29,4 +30,4 @@ const Slider = ({ value = 0.5, onChange }: SliderProps) => {
  );
 };
 
-export default Slider;
+export default TimeSlider;
