@@ -7,12 +7,14 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { twMerge } from "tailwind-merge";
 
 interface LikeButtonProps {
  songId: string;
+ className: string;
 }
 
-const LikeButton: React.FC<LikeButtonProps> = ({ songId }) => {
+const LikeButton: React.FC<LikeButtonProps> = ({ songId, className }) => {
  const router = useRouter();
 
  const { supabaseClient } = useSessionContext();
@@ -81,7 +83,10 @@ const LikeButton: React.FC<LikeButtonProps> = ({ songId }) => {
  return (
   <button
    onClick={handleLike}
-   className="opacity-75 hover:opacity-100 transition"
+   className={twMerge(
+    "opacity-75 hover:opacity-100 transition",
+    className
+   )}
   >
    <Icon
     color={isLiked ? "#22c55e" : "white"}
