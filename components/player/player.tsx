@@ -18,7 +18,6 @@ const Player = () => {
  return (
   <div className="h-[80px] bg-black w-full ">
    <PlayerContent
-    key={songUrl}
     song={song}
     songUrl={songUrl}
    />
