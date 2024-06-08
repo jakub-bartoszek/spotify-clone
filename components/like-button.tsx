@@ -1,20 +1,18 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import useAuthModal from "@/hooks/useAuthModal";
 import { useUser } from "@/hooks/useUser";
 import { useSessionContext } from "@supabase/auth-helpers-react";
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
-import { twMerge } from "tailwind-merge";
 
 interface LikeButtonProps {
  songId: string;
- className: string;
 }
 
-const LikeButton: React.FC<LikeButtonProps> = ({ songId, className }) => {
+const LikeButton: React.FC<LikeButtonProps> = ({ songId }) => {
  const router = useRouter();
 
  const { supabaseClient } = useSessionContext();
@@ -83,10 +81,7 @@ const LikeButton: React.FC<LikeButtonProps> = ({ songId, className }) => {
  return (
   <button
    onClick={handleLike}
-   className={twMerge(
-    "opacity-75 hover:opacity-100 transition",
-    className
-   )}
+   className="opacity-75 hover:opacity-100 transition"
   >
    <Icon
     color={isLiked ? "#22c55e" : "white"}
