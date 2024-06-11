@@ -86,7 +86,9 @@ const Header = ({ children, className }: HeaderProps) => {
         Logout
        </Button>
        <Button
-        onClick={handleLogout}
+        onClick={() => {
+         router.push("/account");
+        }}
         className="bg-white"
        >
         <FaUserAlt className="h-[24px]" />
