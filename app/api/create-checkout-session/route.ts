@@ -3,7 +3,7 @@ import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 
 import { stripe } from "@/libs/stripe";
-import { getURL } from "next/dist/shared/lib/utils";
+import { getURL } from "@/utils/getURL";
 import { createOrRetrieveCustomer } from "@/libs/supabaseAdmin";
 
 export async function POST(request: Request) {
@@ -38,12 +38,12 @@ export async function POST(request: Request) {
     metadata
    },
    success_url: `${getURL()}/account`,
-   cancel_url: `${getURL()}`
+   cancel_url: `${getURL()}/`
   });
 
   return NextResponse.json({ sessionId: session.id });
  } catch (err: any) {
-  console.log(err);
+  console.log(err.message);
   return new NextResponse("Internal Error", { status: 500 });
  }
 }
