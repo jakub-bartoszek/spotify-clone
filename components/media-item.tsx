@@ -1,6 +1,7 @@
 "use client";
 
 import useLoadImage from "@/hooks/useLoadImage";
+import usePlayer from "@/hooks/usePlayer";
 import { Song } from "@/types/types";
 import Image from "next/image";
 import { IoMusicalNotes } from "react-icons/io5";
@@ -11,12 +12,15 @@ interface MediaItemProps {
 }
 
 const MediaItem = ({ data, onClick }: MediaItemProps) => {
+ const player = usePlayer();
  const imagePath = useLoadImage(data);
 
  const handleClick = () => {
   if (onClick) {
    return onClick(data.id);
   }
+
+  return player.setId(data.id);
  };
 
  return (
@@ -42,7 +46,7 @@ const MediaItem = ({ data, onClick }: MediaItemProps) => {
     <p className="text-white truncate">{data.title}</p>
     <p className="text-neutral-400 text-sm truncate">
      {data.author}
-    </p>
+     </p>
    </div>
   </div>
  );
