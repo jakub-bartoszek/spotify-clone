@@ -6,6 +6,7 @@ App live here: [spotify-clone-jb.vercel.app](https://spotify-clone-jb.vercel.app
 ## Table of Contents
 - [Installation](#instalation)
 - [Features](#features)
+- [Test free premium](#test-free-premium)
 - [Technologies used](#technologies-used)
 - [Contact](#contact)
 
@@ -51,6 +52,15 @@ App live here: [spotify-clone-jb.vercel.app](https://spotify-clone-jb.vercel.app
 
 ### 4. Search
    - Searching for songs by title
+
+## Test free premium
+You can purchase test premium plan for free by puting these credentials:
+### Card information
+- Card number: 4242 4242 4242 4242
+- Expiration date: 55/05
+- CVC code: 555
+### Card's owner information
+- You can pass whatever you want
 
 ## Technologies Used
 ### Core Technologies
