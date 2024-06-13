@@ -14,6 +14,7 @@ const font = Figtree({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
  title: "Spotify Clone",
+ icons:{ icon: "/spotify-icon.png"}
 };
 
 export const revalidate = 0;
@@ -28,12 +29,7 @@ export default async function RootLayout({
 
  return (
   <html lang="en">
-   <head>
-    <link
-     rel="icon"
-     href="/spotify-icon.png"
-    />
-   </head>
+
    <body className={`${font.className} h-full overflow-hidden`}>
     <ToasterProvider />
     <SupabaseProvider>
