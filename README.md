@@ -1,7 +1,7 @@
 # Spotify-clone
 A Spotify-like application where you can listen to music, upload songs and add them to your favourites!
 
-App live here: [spotify-clone-jb.vercel.app](https://spotify-clone-jb.vercel.app/)
+[App live here.](https://spotify-clone-jb.vercel.app/)
 
 ## Table of Contents
 - [Installation](#instalation)
@@ -81,8 +81,9 @@ You can purchase test premium plan for free by puting these credentials:
 - uniqid
 
 ## Contact
+
 For issues, questions, or suggestions, please open an issue in the repository or contact:
 
-Email: jakub.bartoszek.dev@gmail.com
-
-GitHub: [jakub-bartoszek](https://github.com/jakub-bartoszek)
+- Email: jakub.bartoszek.dev@gmail.com
+- Linkedin: [jbartoszek-dev](https://www.linkedin.com/in/jbartoszek-dev)
+- GitHub: [jakub-bartoszek](https://github.com/jakub-bartoszek)
