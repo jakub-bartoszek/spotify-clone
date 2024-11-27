@@ -4,7 +4,7 @@ A Spotify-like application where you can listen to music, upload songs and add t
 [App live here.](https://spotify-clone-jb.vercel.app/)
 
 ## Table of Contents
-- [Installation](#instalation)
+- [Instalation](#instalation)
 - [Features](#features)
 - [Test free premium](#test-free-premium)
 - [Technologies used](#technologies-used)
